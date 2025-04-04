@@ -2,7 +2,10 @@ from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
-from bot.config.settings import TOKEN, WEBHOOK_URL
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from config.settings import TOKEN, WEBHOOK_URL  # Убрали 'bot.'
 from bot.handlers.menu_handler import router as menu_router
 
 bot = Bot(token=TOKEN)
