@@ -1,6 +1,6 @@
 from aiogram import Router, types
 from aiogram.types import CallbackQuery
-from bot.config.menu_config import MENU_STRUCTURE
+from ..config.menu_config import MENU_STRUCTURE  # Исправленный импорт
 from bot.keyboards.menu import create_menu_keyboard
 
 router = Router()
