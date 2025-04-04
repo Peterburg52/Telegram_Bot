@@ -6,7 +6,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config.settings import TOKEN, WEBHOOK_URL  # Убрали 'bot.'
-from bot.handlers.menu_handler import router as menu_router
+from handlers.menu_handler import router as menu_router
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
