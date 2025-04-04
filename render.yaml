@@ -1,1 +1,12 @@
-
+services:
+  - name: telegram-bot
+    type: web
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot/bot.py
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
